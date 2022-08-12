@@ -1,0 +1,52 @@
+//----- Variables / Breakpoints (set to project specific values)
+
+// Mobile
+$mobile     : 767px;
+$overPhone  : $mobile + 1;
+$desktop    : 1440px;
+
+// vw
+
+// Max & min width
+$max                : max-width;
+$min                : min-width;
+
+//----- Breakpoints
+$breakpoints        : (
+  'phone'           : '(#{$max}: #{$mobile})',
+  'tablet'          : '(#{$min}: #{$overPhone})',
+  'desktop'  	    : '(#{$min}: #{$desktop})'
+);
+
+
+//----- Mixin / Breakpoints
+
+@mixin breakpoint($name, $push: false) {
+    // If the key exists in the map
+    @if map-has-key($breakpoints, $name) {
+      // Prints a media query based on the value
+      @media all and #{map-get($breakpoints, $name)} {
+        @content;
+      }
+    }
+  
+    // If the key doesn't exist in the map
+    // But $push is defined
+    @else if $push != false {
+      // Add the new breakpoint to the map
+      $breakpoints: map-merge($breakpoints, ($name: $push)) !global;
+      // And re-call the mixin normally
+      @include breakpoint($name) {
+        @content;
+      }
+    }
+  
+    // If the key doesn't exist in the map
+    // And there is no push
+    @else {
+      // Just warn the user
+      @warn unquote("\"Couldn't find a breakpoint named \"#{$name}\" !!!\"");
+    }
+  }
+
+  
