@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Anchor = (props) => {
-  // console.log(props.props.data.data.attributes.anchorHp)
+  console.log(props.props.data.data.attributes.anchorHp)
   const anchorData = props.props.data.data.attributes.anchorHp
   return (
 
@@ -9,8 +9,9 @@ const Anchor = (props) => {
       {anchorData.map((item) => {
         return (
           <div key={item.id} className="anchor-item">
-            <span> {item.title}</span>
+            <span className="anchor-title"> {item.title}</span>
             <span className="anchor-arrow"></span>
+            <span className="anchor-desc">{item.description}</span>
           </div>
         );
       })}

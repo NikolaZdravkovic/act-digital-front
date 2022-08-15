@@ -33,7 +33,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include breakpoint(tablet) {
+      position: relative;
+    }
     @include breakpoint(desktop) {
+      flex-wrap: wrap;
+      justify-content: normal;
       font-size: 21px;
     }
     &:first-child {
@@ -49,7 +54,22 @@
     background-position: center;
     margin-left: 10px;
     @include breakpoint(tablet) {
+      position: absolute;
+      right: 10px;
       display: block;
+    }
+  }
+  &-title {
+    @include breakpoint(desktop) {
+      font-size: 21px;
+      width: 100%;
+    }
+  }
+  &-desc {
+    display: none;
+    @include breakpoint(desktop) {
+      display: block;
+      font-size: 14px;
     }
   }
 }
@@ -69,6 +89,10 @@
       padding-left: 20px;
       @include breakpoint(desktop) {
         width: 40%;
+        font-size: 52px;
+        line-height: 62px;
+        position: relative;
+        top: -18px;
       }
     }
   }

@@ -37,7 +37,6 @@ const Nav = () => {
                         <ul className="nav-links__items">
                             {navItems.map((item) => {
                                 if (item.label === "Industries") {
-                                    // console.log('radi')
                                     return (
                                         <li
                                             key={item.id}
@@ -53,6 +52,7 @@ const Nav = () => {
                                     </li>
                                 );
                             })}
+                            <div className="nav-divider"></div>
                             <div className="nav-links__languages">
                                 {langItems.map((item) => {
                                     return (

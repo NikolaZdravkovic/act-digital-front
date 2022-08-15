@@ -4,11 +4,20 @@
     display: block;
     z-index: 1;
     top: 10px;
+    @include breakpoint(desktop){
+        padding-top: 22px;
+    }
     &-wrapper {
         position: relative;
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+    &-divider{
+        height: 18px;
+        position: relative;
+        border-left: 1px solid $color-white;
+        left: 13px;
     }
     &-logo {
         width: 50px;
@@ -71,7 +80,7 @@
         &__item {
             @include breakpoint(tablet) {
                 display: block;
-                padding-right: 10px;
+                padding-left: 40px;
             }
         }
         &__items {
@@ -82,8 +91,14 @@
         }
         &__languages {
             display: flex;
-            border-left: 1px solid $color-white;
             padding-left: 10px;
+            .nav-links__item{
+                @include breakpoint(desktop){
+                   padding: 0 10px 0 0;
+                   left: 20px;
+                   position: relative;
+                }
+            }
         }
     }
 }
