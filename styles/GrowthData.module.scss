@@ -1,0 +1,161 @@
+.growth {
+    width: 90%;
+
+    @include breakpoint(desktop) {
+        width: 99%;
+    }
+
+    &-wrapper {
+        padding-top: 70px;
+        display: flex;
+        flex-wrap: wrap;
+        @include breakpoint(tablet) {
+            padding-top: 165px;
+            flex-wrap: nowrap;
+        }
+    }
+    &-divider {
+        height: 10px;
+        border-left: 1px solid $color-blue;
+        padding-right: 10px;
+        height: 40px;
+        position: relative;
+        top: 2px;
+        @include breakpoint(desktop) {
+            height: 65px;
+        }
+    }
+    &-consultants,
+    &-offices,
+    &-year,
+    &-customers {
+        position: relative;
+        display: flex;
+        margin-bottom: 35px;
+    }
+    &-consultants {
+        width: 60%;
+        .growth-block {
+            padding-left: 60px;
+            @include breakpoint(desktop) {
+                width: 30%;
+                padding-left: 107px;
+            }
+        }
+   
+        &--icon {
+            width: 40px;
+            left: 15px;
+            top: 2px;
+            position: absolute;
+            @include breakpoint(desktop) {
+                width: 100%;
+                left: 24px;
+                top: -3px;
+            }
+        }
+    }
+    &-offices {
+        width: 40%;
+        .growth-block {
+            padding-left: 62px;
+            @include breakpoint(desktop) {
+                width: 30%;
+                padding-left: 46px;
+            }
+        }
+        .growth-divider {
+            @include breakpoint(desktop) {
+                left: -62px;
+            }
+        }
+        &--icon {
+            left: 20px;
+            width: 28px;
+            top: 5px;
+            position: absolute;
+            @include breakpoint(desktop) {
+                width: 100%;
+                left: -25px;
+                top: -3px;
+            }
+        }
+    }
+    &-year {
+        width: 60%;
+        .growth-block {
+            padding-left: 60px;
+            @include breakpoint(desktop) {
+                width: 90%;
+                padding-left: 119px;
+            }
+        }
+        .growth-divider {
+            @include breakpoint(desktop) {
+                left: 14px;
+            }
+        }
+        &--icon {
+            left: 10px;
+            top: 2px;
+            position: absolute;
+            & span span {
+                @include breakpoint(desktop) {
+                    width: 60px !important;
+                    height: 60px !important;
+                }
+            }
+            @include breakpoint(desktop) {
+                left: 37px;
+            }
+        }
+    }
+    &-customers {
+        width: 40%;
+        .growth-block {
+            padding-left: 60px;
+            @include breakpoint(desktop) {
+                width: 90%;
+                padding-left: 49px;
+            }
+        }
+        .growth-divider {
+            @include breakpoint(desktop) {
+                left: -46px;
+            }
+        }
+        &--icon {
+            left: 20px;
+            top: 5px;
+            width: 36px;
+            position: absolute;
+            @include breakpoint(desktop) {
+                width: 100%;
+                left: -21px;
+            }
+        }
+    }
+    &-block {
+        display: flex;
+        flex-wrap: wrap;
+        &--data {
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 29px;
+            color: $color-blue;
+            @include breakpoint(desktop) {
+                font-size: 44px;
+                padding-bottom: 20px;
+            }
+        }
+        &--text {
+            font-family: $font-secondary;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 14px;
+            @include breakpoint(desktop) {
+                font-size: 18px;
+            }
+        }
+    }
+}
