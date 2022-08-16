@@ -2,6 +2,7 @@ import Hero from "../components/shared/Hero"
 import Anchor from "../components/slices/Anchor"
 import TextBlock from "../components/shared/TextBlock"
 import GrowthData from "../components/shared/GrowthData"
+import Industries from "../components/slices/Industries"
 import Image from "next/image"
 
 export default function Home(props) {
@@ -28,6 +29,9 @@ export default function Home(props) {
         </div>
       </div>
       < GrowthData />
+      <div className="industries container">
+        <Industries props={props} />
+      </div>
     </div>
   )
 }

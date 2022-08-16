@@ -6,12 +6,15 @@
     }
 
     &-wrapper {
-        padding-top: 70px;
+        padding: 70px 0 55px 0;
         display: flex;
         flex-wrap: wrap;
         @include breakpoint(tablet) {
             padding-top: 165px;
             flex-wrap: nowrap;
+        }
+        @include breakpoint(desktop){
+           padding-bottom: 130px;
         }
     }
     &-divider {
