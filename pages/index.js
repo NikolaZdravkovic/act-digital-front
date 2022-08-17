@@ -3,6 +3,7 @@ import Anchor from "../components/slices/Anchor"
 import TextBlock from "../components/shared/TextBlock"
 import GrowthData from "../components/shared/GrowthData"
 import Industries from "../components/slices/Industries"
+import Aproach from "../components/slices/Aproach"
 import Image from "next/image"
 
 export default function Home(props) {
@@ -31,6 +32,9 @@ export default function Home(props) {
       < GrowthData />
       <div className="industries container">
         <Industries props={props} />
+      </div>
+      <div className="aproach container">
+        <Aproach props={props}/>
       </div>
     </div>
   )

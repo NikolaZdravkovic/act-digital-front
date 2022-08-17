@@ -94,24 +94,21 @@
       position: absolute;
       bottom: 9px;
       left: 10px;
+      @include breakpoint(desktop) {
+        font-size: 21px;
+        bottom: 23px;
+        left: 23px;
+      }
     }
     @include breakpoint(tablet) {
       max-width: 700px;
     }
     @include breakpoint(desktop) {
       width: 100%;
-      max-width:none;
+      max-width: none;
     }
   }
-  &-title {
-    font-size: 24px;
-    color: $color-blue;
-    padding-bottom: 30px;
-    @include breakpoint(desktop) {
-      font-size: 32px;
-      padding-bottom: 45px;
-    }
-  }
+
   &-item {
     background-size: contain;
     background-repeat: no-repeat;
@@ -121,7 +118,7 @@
     color: $color-white;
     max-width: 330px;
     width: 47%;
-    @include breakpoint (tablet){
+    @include breakpoint(tablet) {
       background-size: auto;
       width: 24%;
     }
@@ -193,6 +190,17 @@
           line-height: 34px;
         }
       }
+    }
+  }
+  .aproach-title,
+  .industries-title {
+    font-weight: 400;
+    font-size: 24px;
+    color: $color-blue;
+    padding-bottom: 30px;
+    @include breakpoint(desktop) {
+      font-size: 32px;
+      padding-bottom: 45px;
     }
   }
 }
