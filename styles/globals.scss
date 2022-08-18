@@ -1,11 +1,11 @@
-@import './variables/all_variables.module.scss';
+@import "./variables/all_variables.module.scss";
 
 @import "./Home.module.scss";
 @import "./Nav.module.scss";
 @import "./GrowthData.module.scss";
 @import "./Aproach.module.scss";
 @import "./CaseStudiesBlock.module.scss";
-
+@import "./NewsBlock.module.scss";
 
 html,
 body {
@@ -22,8 +22,11 @@ a {
 * {
   box-sizing: border-box;
 }
-.container{
+.container {
   max-width: 1380px;
   margin: 0 auto;
+  width: 90%;
+  @include breakpoint(desktop) {
+    width: 100%;
+  }
 }
-

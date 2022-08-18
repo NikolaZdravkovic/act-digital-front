@@ -1,0 +1,93 @@
+.news {
+    padding-top: 36px;
+    @include breakpoint(desktop) {
+        padding-top: 64px;
+    }
+    &-wrapper {
+        @include breakpoint(tablet) {
+            display: flex;
+        }
+    }
+    &-block {
+        @include breakpoint(tablet) {
+            margin-right: 10px;
+        }
+    
+    }
+
+    &-frame {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 15px;
+        padding-bottom: 10px;
+        @include breakpoint(desktop) {
+            padding-bottom: 0px;
+        }
+    }
+    &-seeAll {
+        display: none;
+        padding-top: 5px;
+        @include breakpoint(desktop) {
+            display: flex;
+            div {
+                padding-right: 20px;
+            }
+            img {
+                height: 14px;
+            }
+        }
+    }
+    &-block {
+        &--category {
+            font-size: 14px;
+            line-height: 17px;
+            color: $color-midGrey;
+            padding-bottom: 7px;
+            @include breakpoint(desktop) {
+                font-size: 16px;
+                line-height: 19px;
+                padding-bottom: 15px;
+            }
+        }
+        &--title {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+            padding-bottom: 17px;
+            @include breakpoint(desktop) {
+                font-size: 21px;
+                line-height: 25px;
+                padding-bottom: 14px;
+            }
+        }
+        &--img {
+            padding-bottom: 10px;
+            @include breakpoint(desktop) {
+                padding-bottom: 28px;
+            }
+        }
+        &--desc {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            padding-bottom: 5px;
+            @include breakpoint(desktop) {
+                font-size: 16px;
+                line-height: 24px;
+                width: 70%;
+                padding-bottom: 21px;
+            }
+        }
+        &--date {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            color: $color-midGrey;
+            padding-bottom: 38px;
+            @include breakpoint(desktop) {
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
+    }
+}

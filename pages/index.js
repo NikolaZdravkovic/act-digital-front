@@ -6,6 +6,7 @@ import Industries from "../components/slices/Industries"
 import Aproach from "../components/slices/Aproach"
 import Experties from "../components/slices/Experties"
 import CaseStudiesBlock from "../components/shared/CaseStudiesBlock"
+import NewsBlock from "../components/shared/NewsBlock"
 import Image from "next/image"
 
 export default function Home(props) {
@@ -42,7 +43,10 @@ export default function Home(props) {
         <Experties props={props} />
       </div>
       <div className="case-studies">
-        <CaseStudiesBlock props={props}/>
+        <CaseStudiesBlock props={props} />
+      </div>
+      <div className="news container">
+        <NewsBlock props={props} />
       </div>
     </div>
   )

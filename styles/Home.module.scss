@@ -78,8 +78,6 @@
 // -----Industries section-----
 
 .industries {
-  width: 95%;
-  margin: auto;
   @include breakpoint(desktop) {
     width: 100%;
     margin: 0;
@@ -253,7 +251,8 @@
   }
   .aproach-title,
   .industries-title,
-  .experties-title {
+  .experties-title,
+  .news-title {
     font-weight: 400;
     font-size: 24px;
     color: $color-blue;
