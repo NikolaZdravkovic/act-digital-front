@@ -245,6 +245,12 @@
       }
     }
   }
+  .case-studies {
+    padding-top: 70px;
+    @include breakpoint(desktop) {
+      padding-top: 149px;
+    }
+  }
   .aproach-title,
   .industries-title,
   .experties-title {

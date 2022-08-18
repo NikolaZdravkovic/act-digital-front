@@ -5,6 +5,7 @@ import GrowthData from "../components/shared/GrowthData"
 import Industries from "../components/slices/Industries"
 import Aproach from "../components/slices/Aproach"
 import Experties from "../components/slices/Experties"
+import CaseStudiesBlock from "../components/shared/CaseStudiesBlock"
 import Image from "next/image"
 
 export default function Home(props) {
@@ -39,6 +40,9 @@ export default function Home(props) {
       </div>
       <div className="experties">
         <Experties props={props} />
+      </div>
+      <div className="case-studies">
+        <CaseStudiesBlock props={props}/>
       </div>
     </div>
   )
