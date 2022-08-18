@@ -4,6 +4,7 @@ import TextBlock from "../components/shared/TextBlock"
 import GrowthData from "../components/shared/GrowthData"
 import Industries from "../components/slices/Industries"
 import Aproach from "../components/slices/Aproach"
+import Experties from "../components/slices/Experties"
 import Image from "next/image"
 
 export default function Home(props) {
@@ -34,7 +35,10 @@ export default function Home(props) {
         <Industries props={props} />
       </div>
       <div className="aproach container">
-        <Aproach props={props}/>
+        <Aproach props={props} />
+      </div>
+      <div className="experties">
+        <Experties props={props} />
       </div>
     </div>
   )

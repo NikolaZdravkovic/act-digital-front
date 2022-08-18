@@ -75,7 +75,7 @@
     }
   }
 }
-// Industries section
+// -----Industries section-----
 
 .industries {
   width: 95%;
@@ -126,6 +126,59 @@
       width: 47%;
       height: 320px;
       margin-bottom: 36px;
+    }
+  }
+}
+
+// -----Experties section -----
+
+.experties {
+  padding-top: 84px;
+  @include breakpoint(desktop) {
+    padding-top: 95px;
+  }
+  &-block {
+    display: flex;
+    overflow-x: auto;
+    &__item {
+      position: relative;
+      &--img {
+        height: 250px;
+        width: 170px;
+        max-width: none;
+        @include breakpoint(tablet) {
+          height: 350px;
+          width: 250px;
+        }
+        @include breakpoint(desktop) {
+          height: 450px;
+          width: 322px;
+        }
+      }
+      &--title {
+        position: absolute;
+        bottom: 0;
+        color: $color-white;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        padding: 0 0 12px 11px;
+        width: 86%;
+        @include breakpoint(desktop) {
+          width: 100%;
+          font-size: 21px;
+          line-height: 25px;
+          padding: 0 0 25px 20px;
+          width: 55%;
+        }
+      }
+    }
+  }
+  &-title {
+    width: 90%;
+    margin: 0 auto;
+    @include breakpoint(desktop) {
+      width: 100%;
     }
   }
 }
@@ -193,7 +246,8 @@
     }
   }
   .aproach-title,
-  .industries-title {
+  .industries-title,
+  .experties-title {
     font-weight: 400;
     font-size: 24px;
     color: $color-blue;
