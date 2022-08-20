@@ -1,0 +1,124 @@
+.contactBlock {
+    padding-top: 52px;
+    max-width: 1440px;
+    margin: auto;
+    @include breakpoint(desktop) {
+        padding-top: 167px;
+    }
+    &__wrap {
+        display: flex;
+    }
+    &-block {
+        background: $color-lightBlue;
+        display: grid;
+        grid-template-columns: 1fr 0.5fr 1.5fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "desc desc desc"
+            "desc desc desc"
+            "img img title"
+            "img img title";
+
+        @include breakpoint(desktop) {
+            grid-template-columns: 1fr 0fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-template-areas:
+                "img img desc"
+                "img img title";
+        }
+    }
+    &-desc {
+        grid-area: desc;
+        max-width: 1380px;
+        font-size: 16px;
+        line-height: 26px;
+        margin: auto;
+        padding: 61px 0 61px 0;
+        width: 90%;
+        @include breakpoint(desktop) {
+            font-size: 32px;
+            line-height: 42px;
+            width: 100%;
+            padding: 0 104px 0px 104px;
+        }
+    }
+    &-img {
+        grid-area: img;
+        img {
+            height: 100%;
+        }
+    }
+    &-title {
+        &__wrap {
+            position: relative;
+            grid-area: title;
+            font-size: 18px;
+            line-height: 22px;
+            color: $color-white;
+            background: $color-blue;
+            &--title {
+                font-size: 18px;
+                line-height: 22px;
+                @include breakpoint(desktop) {
+                    font-size: 32px;
+                    line-height: 39px;
+                }
+            }
+
+            &--icon {
+                position: relative;
+                top: 3px;
+                left: 38px;
+                @include breakpoint(desktop){
+                    top: 14px;
+                    left: 27px;
+                }
+            }
+        }
+        &__wrapper {
+            display: flex;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            @include breakpoint(tablet) {
+                width: auto;
+            }
+            @include breakpoint(desktop) {
+                width: 70%;
+            }
+        }
+    }
+}
+
+// .item1 {
+//     grid-area: desc;
+// }
+// .item2 {
+//     grid-area: img;
+// }
+// .item3 {
+//     grid-area: title;
+// }
+
+// // mobile
+// .grid-container {
+//   display: grid;
+//   grid-template-areas:
+//     'desc desc desc desc'
+//     'img img title title'
+//     'img img title title';
+//   background-color: #2196F3;
+// }
+
+// desktop
+
+// .grid-container {
+//   display: grid;
+//   grid-template-areas:
+//     'img img desc desc'
+//     'img img title title'
+//     'img img title title';
+//   background-color: #2196F3;
+// }

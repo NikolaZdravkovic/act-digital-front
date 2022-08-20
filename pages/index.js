@@ -8,6 +8,7 @@ import Experties from "../components/slices/Experties"
 import CaseStudiesBlock from "../components/shared/CaseStudiesBlock"
 import NewsBlock from "../components/shared/NewsBlock"
 import Clients from "../components/shared/Clients"
+import ContactBlock from "../components/global/ContactBlock"
 import Image from "next/image"
 
 export default function Home(props) {
@@ -51,6 +52,9 @@ export default function Home(props) {
       </div>
       <div className="clients container">
         <Clients props={props} />
+      </div>
+      <div className="contactBlock">
+        <ContactBlock props ={props}/>
       </div>
     </div>
   )

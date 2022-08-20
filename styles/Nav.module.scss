@@ -80,6 +80,9 @@
         &__item {
             @include breakpoint(tablet) {
                 display: block;
+                padding-left: 20px;
+            }
+            @include breakpoint(desktop){
                 padding-left: 40px;
             }
         }

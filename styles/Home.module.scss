@@ -138,6 +138,8 @@
   &-block {
     display: flex;
     overflow-x: auto;
+    margin: auto;
+    max-width: 1440px;
     &__item {
       position: relative;
       &--img {

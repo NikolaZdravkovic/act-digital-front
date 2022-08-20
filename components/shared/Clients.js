@@ -8,8 +8,8 @@ const Clients = ({ props }) => {
             <div className="clients-title">Our clients</div>
             <div className="clients-block">
                 {data.map((item, index) => (
-                    <div className="clients-item">
-                        <div key={index} className="clients-img">
+                    <div key={index} className="clients-item">
+                        <div  className="clients-img">
                             <img src={`${item.image.data.attributes.url}`} alt="" />
                         </div>
                     </div>
