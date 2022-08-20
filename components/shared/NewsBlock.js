@@ -16,7 +16,7 @@ const NewsBlock = ({ props }) => {
             </div>
             <div className="news-wrapper">
                 {data.map((item, index) => (
-                    <div className="news-block">
+                    <div key={index} className="news-block">
                         <div className="news-block--category">
                             {item.category}
                         </div>

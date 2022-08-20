@@ -1,0 +1,35 @@
+.clients {
+    padding-top: 30px;
+    @include breakpoint(desktop) {
+        padding-top: 104px;
+    }
+    &-wrapper {
+    }
+    &-title {
+        padding-bottom: 35px;
+        @include breakpoint(desktop) {
+        }
+    }
+    &-block {
+        display: flex;
+        flex-wrap: wrap;
+        @include breakpoint(desktop) {
+        }
+    }
+    &-item {
+        width: 21%;
+        margin-right: 13px;
+        margin-bottom: 18px;
+        @include breakpoint(desktop) {
+            width: 15%;
+            margin-right: 23px;
+        }
+    }
+    &-img {
+        padding: 15px;
+        border: 1px solid $color-lighGrey;
+        @include breakpoint(desktop) {
+            padding: 46px;
+        }
+    }
+}

@@ -7,6 +7,7 @@ import Aproach from "../components/slices/Aproach"
 import Experties from "../components/slices/Experties"
 import CaseStudiesBlock from "../components/shared/CaseStudiesBlock"
 import NewsBlock from "../components/shared/NewsBlock"
+import Clients from "../components/shared/Clients"
 import Image from "next/image"
 
 export default function Home(props) {
@@ -47,6 +48,9 @@ export default function Home(props) {
       </div>
       <div className="news container">
         <NewsBlock props={props} />
+      </div>
+      <div className="clients container">
+        <Clients props={props} />
       </div>
     </div>
   )
