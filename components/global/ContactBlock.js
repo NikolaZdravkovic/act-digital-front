@@ -3,7 +3,6 @@ import arrow from '../../public/assets/arrow.png'
 
 const ContactBlock = ({ props }) => {
     const data = props.data.data.attributes.contactBlockHP;
-    console.log(data)
     return (
         <div className="contactBlock-wrapper">
             <div className="contactBlock-block">

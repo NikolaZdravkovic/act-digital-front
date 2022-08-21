@@ -1,0 +1,150 @@
+.footer {
+    background-color: $color-black;
+    &-block {
+        padding-top: 58px;
+        display: grid;
+        color: $color-white;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            "industries services ."
+            "insights about ."
+            "follow copyRights .";
+        @include breakpoint(desktop) {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 0.77fr;
+            grid-template-areas:
+                "logo industries services insights about follow"
+                "copyRights copyRights copyRights copyRights copyRights copyRights";
+        }
+    }
+
+    &-item {
+        padding-bottom: 20px;
+        @include breakpoint(desktop) {
+            width: 220px;
+        }
+        &--title {
+            padding-bottom: 17px;
+            font-size: 16px;
+            line-height: 19px;
+            @include breakpoint(desktop) {
+                font-size: 18px;
+                line-height: 22px;
+            }
+        }
+        &--links {
+            padding-bottom: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            width: 60%;
+            a {
+                font-size: 10px;
+                line-height: 12px;
+                padding-bottom: 10px;
+                @include breakpoint(desktop) {
+                    font-size: 12px;
+                    line-height: 14px;
+                }
+            }
+        }
+        &__logo {
+            display: none;
+            @include breakpoint(desktop) {
+                display: block;
+                img {
+                    width: 30%;
+                    position: relative;
+                    right: 14px;
+                }
+            }
+        }
+        &__industries {
+            grid-area: industries;
+        }
+        &__services {
+            grid-area: services;
+        }
+        &__insights {
+            grid-area: insights;
+        }
+        &__about {
+            grid-area: about;
+        }
+        &__follow {
+            grid-area: follow;
+            padding-top: 63px;
+            .footer-item--links {
+                width: 36%;
+                @include breakpoint(desktop) {
+                    position: absolute;
+                    right: 7px;
+                    top: 40px;
+                }
+            }
+
+            @include breakpoint(desktop) {
+                width: 220px;
+                padding-top: 0;
+                position: relative;
+                .footer-item--title {
+                    position: absolute;
+                    right: 7px;
+                }
+            }
+        }
+        &__copyRights {
+            grid-area: copyRights;
+            padding-top: 63px;
+
+            @include breakpoint(desktop) {
+                position: relative;
+                padding-top: 160px;
+                width: 82%;
+                padding-bottom: 50px;
+                bottom: 25px;
+            }
+            .footer-item--link {
+                font-size: 10px;
+                line-height: 12px;
+                padding-bottom: 10px;
+
+                &:last-child {
+                    &::before {
+                        display: none;
+                        content: "";
+                        height: 2px;
+                        width: 90px;
+                        background: #fff;
+                        position: absolute;
+                        transition: 0.5s 0.25s;
+                        border-radius: 2px;
+                        top: 6px;
+                        right: 22rem;
+                    }
+                }
+                @include breakpoint(desktop) {
+                    font-size: 12px;
+                    line-height: 14px;
+                    padding-bottom: 0;
+                    &:last-child {
+                        position: relative;
+                        left: 15.5rem;
+                        &::before {
+                            display: block;
+                        }
+                    }
+                }
+            }
+            .footer-item--links {
+                justify-content: unset;
+                @include breakpoint(desktop) {
+                    position: absolute;
+                    bottom: 0;
+                    justify-content: space-between;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

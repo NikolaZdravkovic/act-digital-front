@@ -54,8 +54,9 @@ export default function Home(props) {
         <Clients props={props} />
       </div>
       <div className="contactBlock">
-        <ContactBlock props ={props}/>
+        <ContactBlock props={props} />
       </div>
+
     </div>
   )
 }
