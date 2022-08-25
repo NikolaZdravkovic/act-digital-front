@@ -9,6 +9,7 @@
         display: flex;
     }
     &-block {
+        max-height:-webkit-fill-available;
         background: $color-lightBlue;
         display: grid;
         grid-template-columns: 1fr 0.5fr 1.5fr;
