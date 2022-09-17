@@ -2,14 +2,17 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-}
-module.exports = {
   images: {
-      domains: ["res.cloudinary.com"],
+    domains: ["res.cloudinary.com"],
+  },
+  i18n: {
+    locales: ['en', 'fr','pt'],
+    defaultLocale: 'en',
   },
   eslint: {
     ignoreDuringBuilds: true
-  }
+  },
 }
+
 
 module.exports = nextConfig

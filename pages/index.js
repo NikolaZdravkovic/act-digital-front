@@ -1,6 +1,9 @@
+import en from '../locales/en';
+import fr from '../locales/fr';
+import pt from '../locales/pt';
+import { useRouter } from 'next/router';
 import Hero from "../components/shared/Hero"
 import Anchor from "../components/slices/Anchor"
-import TextBlock from "../components/shared/TextBlock"
 import GrowthData from "../components/shared/GrowthData"
 import Industries from "../components/slices/Industries"
 import Aproach from "../components/slices/Aproach"
@@ -9,29 +12,36 @@ import CaseStudiesBlock from "../components/shared/CaseStudiesBlock"
 import NewsBlock from "../components/shared/NewsBlock"
 import Clients from "../components/shared/Clients"
 import ContactBlock from "../components/global/ContactBlock"
-import Image from "next/image"
 
 export default function Home(props) {
-  const { url } = props.data.data.attributes.hero.image.data.attributes
-  const { textBlock } = props.data.data.attributes;
-  const textBlock_1 = textBlock[0];
-  // const textBlock_2 =textBlock[1];
+  const router = useRouter();
+  const { locale } = router;
+  let lang;
+  if (locale === 'en') {
+    lang = en
+  }
+  if (locale === 'fr') {
+    lang = fr
+  }
+  if (locale === 'pt') {
+    lang = pt
+  }
 
+
+  console.log(locale, router)
   return (
 
-
     <div className="homepage-container">
-      <div style={{ backgroundImage: `url(${url})` }} className="banner">
-        <Hero props={props} />
-        <div className="banner-anchors">
-          <Anchor props={props} />
-        </div>
+      <Hero props={props} />
+      <div className="banner-anchors">
+        <Anchor props={props} />
       </div>
 
       <div className="text-block">
         <div className="text-block-background"></div>
         <div className="text-block-title">
-          <TextBlock props={textBlock_1} />
+          {/* <TextBlock props={textBlock_1} /> */}
+          <h4>{lang.hpText}</h4>
         </div>
       </div>
       < GrowthData />
