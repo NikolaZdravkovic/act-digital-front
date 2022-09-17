@@ -1,6 +1,7 @@
 import en from '../locales/en';
 import fr from '../locales/fr';
 import pt from '../locales/pt';
+import { API_URL } from '../config/index'
 import { useRouter } from 'next/router';
 import Hero from "../components/shared/Hero"
 import Anchor from "../components/slices/Anchor"
@@ -72,7 +73,7 @@ export default function Home(props) {
 }
 // This gets called on every request
 export async function getServerSideProps() {
-  const res = await fetch(`http://localhost:1337/api/homepage?populate=deep`)
+  const res = await fetch(`${API_URL}/api/homepage?populate=deep`)
   const data = await res.json()
 
   return { props: { data } }

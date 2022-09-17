@@ -7,6 +7,8 @@ import en from '../../locales/en';
 import fr from '../../locales/en';
 import pt from '../../locales/pt';
 import { useRouter } from 'next/router';
+import { API_URL } from '../../config/index'
+
 
 async function fetcher(url) {
     const res = await fetch(url);
@@ -15,7 +17,7 @@ async function fetcher(url) {
 }
 
 const Nav = () => {
-    const url = 'http://localhost:1337/api/navigation?populate=deep';
+    const url = `${API_URL}/api/navigation?populate=deep`;
     const { data, error } = useSWR(url, fetcher);
     const router = useRouter();
     const { locale, locales, asPath } = router;

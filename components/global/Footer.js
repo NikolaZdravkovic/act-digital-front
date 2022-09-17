@@ -2,6 +2,8 @@ import React from 'react'
 import useSWR from 'swr';
 import logo from '../../public/logo.png'
 import Link from 'next/link'
+import { API_URL } from '../../config/index'
+
 
 
 async function fetcher(url) {
@@ -11,7 +13,7 @@ async function fetcher(url) {
 }
 
 const Footer = () => {
-    const url = 'http://localhost:1337/api/footer?populate=deep';
+    const url = `${API_URL}/api/footer?populate=deep`;
     const { data, error } = useSWR(url, fetcher);
     if (error) return <div>failed to load</div>
     if (!data) return <div>loading...</div>
