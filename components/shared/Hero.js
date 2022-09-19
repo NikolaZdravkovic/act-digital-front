@@ -5,7 +5,6 @@ import Image from "next/image"
 const Hero = ({ props }) => {
     const data = props.data.data.attributes;
     const { url } = props.data.data.attributes.hero.image.data.attributes
-
     return (
         <div className="banner">
             <div className="banner-image">
@@ -23,7 +22,7 @@ const Hero = ({ props }) => {
                 <div className='banner-title'>
                     <h1>{data.hero.title}</h1>
                 </div>
-                <div className="banner-description">
+                <div className={data.hero.title  === null ? "banner-description" : "banner-desc"} >
                     <p>{data.hero.description}</p>
                 </div>
             </div>

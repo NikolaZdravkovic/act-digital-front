@@ -2,7 +2,7 @@ import React from 'react'
 import arrow from '../../public/assets/arrow.png'
 
 const ContactBlock = ({ props }) => {
-    const data = props.data.data.attributes.contactBlockHP;
+    const data = props.data.data.attributes.contactBlock;
     return (
         <div className="contactBlock-wrapper">
             <div className="contactBlock-block">

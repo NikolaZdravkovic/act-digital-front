@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Clients = ({ props }) => {
-    const data = props.data.data.attributes.clientsBlockHP;
+    const data = props.data.data.attributes.clientsBlock;
 
     return (
         <div className="clients-wrapper">

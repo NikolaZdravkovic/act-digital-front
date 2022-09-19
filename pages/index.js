@@ -29,7 +29,7 @@ export default function Home(props) {
   }
 
 
-  console.log(locale, router)
+  // console.log(locale, router)
   return (
 
     <div className="homepage-container">

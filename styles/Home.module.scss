@@ -14,18 +14,28 @@
     }
   }
   &-category {
-  
   }
   &-title {
     font-size: 36px;
-    @include breakpoint(desktop){
+    @include breakpoint(desktop) {
       font-size: 52px;
     }
   }
-  &-description {
+  &-description,
+  &-desc {
     font-size: 24px;
-    @include breakpoint(desktop){
+    line-height: 32px;
+    max-width: 600px;
+    @include breakpoint(desktop) {
       font-size: 32px;
+      line-height: 42px;
+    }
+  }
+  &-description {
+    position: relative;
+    top: 13rem;
+    @include breakpoint(desktop) {
+      top: 15rem;
     }
   }
   &-anchors {
@@ -208,7 +218,7 @@
 
 .homepage-container {
   .banner-wrapper {
-    width: 100%;
+    width: 90%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -217,6 +227,9 @@
     font-weight: 400;
     font-size: 36px;
     line-height: 42px;
+    @include breakpoint(desktop) {
+      width: 100%;
+    }
     h1 {
       padding-left: 20px;
       @include breakpoint(desktop) {

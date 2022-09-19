@@ -1,0 +1,138 @@
+.industries-container {
+    .banner {
+        @include breakpoint(desktop) {
+            height: 600px;
+        }
+    }
+    .banner-description {
+        color: $color-white;
+        position: relative;
+        top: 29.2rem;
+        @include breakpoint(desktop) {
+            top: 24rem;
+        }
+    }
+    .case-studies {
+        padding-top: 60px;
+        @include breakpoint(desktop) {
+            padding-top: 156px;
+        }
+    }
+}
+.industrie-categories {
+    &__wrapper {
+        @include breakpoint(tablet) {
+            display: flex;
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+    }
+    &__learn {
+        background-color: $color-blue;
+        color: $color-white;
+        @include breakpoint(tablet) {
+            width: 40%;
+        }
+        @include breakpoint(desktop) {
+            width: 32.6%;
+            .container {
+                width: 85%;
+            }
+        }
+        &--title {
+            font-size: 24px;
+            line-height: 32px;
+            padding-top: 52px;
+            max-width: 190px;
+            @include breakpoint(desktop) {
+                font-size: 32px;
+                line-height: 38.73px;
+                max-width: 250px;
+                padding-top: 105px;
+            }
+        }
+        &--text {
+            font-size: 14px;
+            line-height: 24px;
+            padding-top: 166px;
+            padding-bottom: 10px;
+            @include breakpoint(desktop) {
+                font-size: 16px;
+                padding-top: 250px;
+            }
+        }
+    }
+    &__block {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 25px;
+        @include breakpoint(tablet) {
+            padding: 0;
+        }
+        &--item {
+            background-color: $color-lightBlue_2;
+            margin: 0 10px 18px 0;
+            width: 47%;
+            position: relative;
+            padding: 11px 0px 50px 10px;
+
+            @include breakpoint(tablet) {
+                width: 49%;
+                &:nth-last-child(-n + 2) {
+                    margin-bottom: 0;
+                }
+                &:nth-child(2n) {
+                    margin-right: 0;
+                }
+            }
+            @include breakpoint(desktop) {
+                width: 33%;
+                padding: 30px 0px 120px 20px;
+                margin: 0 5px 5px 0;
+                &:nth-child(2n) {
+                    margin-right: 5px;
+                }
+                &:nth-child(3n) {
+                    margin-right: 0;
+                }
+            }
+        }
+        &--icon {
+            padding-bottom: 10px;
+
+            & span {
+                width: 14px !important;
+                @include breakpoint(desktop) {
+                    width: 36px !important;
+                }
+            }
+        }
+        &--arrow {
+            align-self: end;
+            & span {
+                width: 22px !important;
+                height: 12px !important;
+                @include breakpoint(desktop) {
+                    width: 26px !important;
+                }
+            }
+        }
+        &--title {
+            font-size: 14px;
+            line-height: 18px;
+            @include breakpoint(desktop) {
+                font-size: 21px;
+            }
+        }
+        &--category {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            bottom: 5px;
+            width: 88%;
+            @include breakpoint(desktop) {
+                bottom: 25px;
+            }
+        }
+    }
+}

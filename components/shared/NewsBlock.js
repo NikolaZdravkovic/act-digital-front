@@ -2,7 +2,7 @@ import React from 'react'
 import triangle_right from '../../public/assets/triangle_right.png'
 
 const NewsBlock = ({ props }) => {
-    const data = props.data.data.attributes.newsBlockHP;
+    const data = props.data.data.attributes.newsBlock;
     return (
         <div className="news">
             <div className="news-frame">
