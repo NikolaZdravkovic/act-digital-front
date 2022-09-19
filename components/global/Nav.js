@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import useSWR from 'swr';
+import useSWR, { SWRConfig } from 'swr';
 import Dropdown from './Dropdown.js'
 import logo from '../../public/logo.png'
 import Image from "next/image";
@@ -9,16 +9,32 @@ import pt from '../../locales/pt';
 import { useRouter } from 'next/router';
 import { API_URL } from '../../config/index'
 
+const fetcher = (...args) => fetch(...args).then((res) => res.json())
 
-async function fetcher(url) {
-    const res = await fetch(url);
-    return res.json();
-
+export default function Nav({ fallback }) {
+    return (
+        <SWRConfig value={{ fallback }}>
+            {getData()}
+        </SWRConfig>
+    )
 }
+export async function getStaticProps() {
+    const res = await fetch(`${API_URL}/api/navigation?populate=deep`)
+    const navData = await res.json();
 
-const Nav = () => {
-    const url = `${API_URL}/api/navigation?populate=deep`;
-    const { data, error } = useSWR(url, fetcher);
+    return {
+        props: {
+            fallback: { "/api/navigation?populate=deep": navData }
+        }
+    }
+}
+function getData() {
+    const {data,error}=useSWR(`${API_URL}/api/navigation?populate=deep`,fetcher)
+
+    if (error) return <div>Error fetching data</div>
+    if (!data) return <div>Loading</div>
+    const navItems = data.data.attributes.body;
+
     const router = useRouter();
     const { locale, locales, asPath } = router;
 
@@ -33,11 +49,6 @@ const Nav = () => {
         lang = pt
     }
 
-    if (error) return <div>failed to load</div>
-    if (!data) return <div>loading...</div>
-    const navItems = data.data.attributes.body;
-    const langItems = data.data.attributes.language;
-    // console.log(navItems, langItems)
 
     return (
         <>
@@ -76,12 +87,12 @@ const Nav = () => {
                             <div className="nav-divider"></div>
                             <div className="nav-links__languages">
                                 {locales.map((l, i) => {
-                                 
+
                                     return (
                                         <span key={i} className="nav-links__item">
-                                                <Link href={asPath} locale={l}>
-                                                    {l}
-                                                </Link>
+                                            <Link href={asPath} locale={l}>
+                                                {l}
+                                            </Link>
                                         </span>
                                     );
                                 })}
@@ -96,5 +107,3 @@ const Nav = () => {
         </>
     )
 }
-
-export default Nav
