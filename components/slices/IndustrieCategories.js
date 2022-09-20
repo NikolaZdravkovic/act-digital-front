@@ -6,7 +6,6 @@ import { useRouter } from 'next/router';
 import Image from 'next/image';
 import arrow from '../../public/assets/arrow_blue.png'
 const IndustrieCategories = ({ props }) => {
-    // console.log(props.data.data.attributes.industriesBlock)
     const data = props.data.data.attributes.industriesBlock;
     const router = useRouter();
     const { locale } = router;
@@ -31,7 +30,7 @@ const IndustrieCategories = ({ props }) => {
                 </div>
                 <div className='industrie-categories__block container'>
                     {data.map((item, index) => (
-                        <div className="industrie-categories__block--item">
+                        <div key={index} className="industrie-categories__block--item">
                             <div className="industrie-categories__block--icon">
                                 <Image width="100%" height="100%" src={item.icon.data.attributes.url} ></Image>
                             </div>

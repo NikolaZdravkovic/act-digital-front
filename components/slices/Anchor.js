@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Anchor = (props) => {
-  // console.log(props.props.data.data.attributes.anchorHp)
   const anchorData = props.props.data.data.attributes.anchorHp
   return (
 

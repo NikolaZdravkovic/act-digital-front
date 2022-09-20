@@ -2,7 +2,6 @@ import React from 'react'
 import triangle_right from '../../public/assets/triangle_right.png'
 
 const CaseStudiesBlock = ({ props }) => {
-    console.log(props)
     const data = props.data.data.attributes.caseStudies
 
     // const data = props.data.data.attributes.caseStudiesHP;

@@ -15,7 +15,6 @@ const dropMenu = submenus[0].subLink
     onClick={() => setDropdown(!dropdown)}
   >
     {dropMenu.map((item) => {
-      // console.log(submenus)
       return (
         <li key={item.id}>
           <Link

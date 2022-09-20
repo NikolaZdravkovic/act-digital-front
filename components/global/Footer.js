@@ -17,7 +17,6 @@ const Footer = () => {
     const { data, error } = useSWR(url, fetcher);
     if (error) return <div>failed to load</div>
     if (!data) return <div>loading...</div>
-    // console.log(data.data.attributes.body)
     const footerData = data.data.attributes.body;
     const industries = footerData[0].FooterLink;
     const services = footerData[1].FooterLink;

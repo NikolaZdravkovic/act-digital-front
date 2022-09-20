@@ -2,7 +2,6 @@ import React from 'react'
 
 const Industries = ({ props }) => {
     const industriesData = props.data.data.attributes.industriesHP
-    // console.log(industriesData)
     let data;
     return (
 
@@ -11,7 +10,6 @@ const Industries = ({ props }) => {
             <div className="industries-block">
                 {industriesData.map((item) => {
                     data = item.image.data.attributes.url;
-                    // console.log(data)
 
                     return (
                         <div style={{ backgroundImage: `url(${item.image.data.attributes.url})` }} key={item.id} className="industries-item">

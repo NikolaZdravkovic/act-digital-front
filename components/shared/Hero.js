@@ -8,11 +8,11 @@ const Hero = ({ props }) => {
     return (
         <div className="banner">
             <div className="banner-image">
-                <Image width="100%"
-                    height="100%"
-                    layout="responsive"
-                    objectFit="cover"
-                    src={url} />
+                    <Image
+                        priority
+                        layout="fill"
+                        objectFit="cover"
+                        src={url} />
 
             </div>
             <div className="banner-wrapper container">
@@ -22,7 +22,7 @@ const Hero = ({ props }) => {
                 <div className='banner-title'>
                     <h1>{data.hero.title}</h1>
                 </div>
-                <div className={data.hero.title  === null ? "banner-description" : "banner-desc"} >
+                <div className={data.hero.title === null ? "banner-description" : "banner-desc"} >
                     <p>{data.hero.description}</p>
                 </div>
             </div>

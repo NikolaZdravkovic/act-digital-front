@@ -4,14 +4,14 @@ const Experties = (props) => {
     const expertiesData = props.props.data.data.attributes.expertiesHP
     return (
         <div className="experties">
-            <div className="experties-title container">
+            <div className="experties-titleHp container">
                 Experties
             </div>
-            <div className="experties-block">
+            <div className="experties-blockHp">
                 {expertiesData.map((item, index) => (
-                    <div key={index} className="experties-block__item">
-                        <img className="experties-block__item--img" src={`${item.image.data.attributes.url}`} alt="" />
-                        <div className="experties-block__item--title">
+                    <div key={index} className="experties-blockHp__item">
+                        <img className="experties-blockHp__item--img" src={`${item.image.data.attributes.url}`} alt="" />
+                        <div className="experties-blockHp__item--title">
                             {item.title}
                         </div>
 

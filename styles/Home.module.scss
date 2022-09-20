@@ -168,7 +168,7 @@
   @include breakpoint(desktop) {
     padding-top: 95px;
   }
-  &-block {
+  &-blockHp {
     display: flex;
     overflow-x: auto;
     margin: auto;
@@ -207,7 +207,7 @@
       }
     }
   }
-  &-title {
+  &-titleHp {
     width: 90%;
     margin: 0 auto;
     @include breakpoint(desktop) {
@@ -289,9 +289,10 @@
   }
   .aproach-title,
   .industries-title,
-  .experties-title,
+  .experties-titleHp,
   .news-title,
-  .clients-title {
+  .clients-title,
+  .experties-title {
     font-weight: 400;
     font-size: 24px;
     color: $color-blue;

@@ -1,20 +1,20 @@
+import React from 'react'
 import { API_URL } from '../config/index'
 import Hero from "../components/shared/Hero"
+import ExpertiesBlock from '../components/slices/ExpertiesBlock'
 import IndustrieCategories from "../components/slices/IndustrieCategories"
 import CaseStudiesBlock from "../components/shared/CaseStudiesBlock"
 import NewsBlock from "../components/shared/NewsBlock"
 import Clients from "../components/shared/Clients"
 import ContactBlock from "../components/global/ContactBlock"
 
-export default function IndustriesPage(props) {
-    const { url } = props.data.data.attributes.hero.image.data.attributes
-
+const Experties = (props) => {
     return (
-
-
-        <div className="industries-container">
+        <div className="experties-container">
             <Hero props={props} />
-            <IndustrieCategories props={props} />
+            <div className="experties">
+                <ExpertiesBlock props={props} />
+            </div>
             <div className="case-studies">
                 <CaseStudiesBlock props={props} />
             </div>
@@ -32,10 +32,13 @@ export default function IndustriesPage(props) {
 }
 // This gets called on every request
 export async function getServerSideProps() {
-    const res = await fetch(`${API_URL}/api/industries-page?populate=deep`)
+    const res = await fetch(`${API_URL}/api/experties-page?populate=deep`)
     const data = await res.json()
 
     return {
         props: { data },
     }
 }
+
+
+export default Experties
