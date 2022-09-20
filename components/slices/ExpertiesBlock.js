@@ -4,7 +4,7 @@ import Image from 'next/image'
 const ExpertiesBlock = ({ props }) => {
     const data = props.data.data.attributes.experties
 
-    console.log(data)
+    // console.log(data)
 
     return (
         <div className="experties-wrapper container">

@@ -303,3 +303,132 @@
     }
   }
 }
+
+// -----About page -----
+.about-container {
+  .banner {
+    height: 600px;
+    &-wrapper {
+      color: $color-white;
+      @include breakpoint(desktop) {
+      }
+    }
+    &-title {
+      margin-bottom: 40px;
+      position: relative;
+      top: 24rem;
+    }
+    &-desc {
+      top: 24rem;
+      position: relative;
+      max-width: 650px;
+    }
+  }
+  .growth-wrapper {
+    @include breakpoint(desktop) {
+      padding-top: 135px;
+      padding-bottom: 135px;
+    }
+  }
+}
+
+// -----Text Markdown -----
+
+.text {
+  max-width: 911px;
+  margin: 0 auto;
+  width: 85%;
+  padding-top: 70px;
+  @include breakpoint(desktop) {
+    padding-top: 117px;
+    width: 100%;
+  }
+  & h2 {
+    color: $color-blue;
+    font-size: 24px;
+    line-height: 32px;
+    padding-bottom: 35px;
+    @include breakpoint(desktop) {
+      font-size: 32px;
+      line-height: 42px;
+      padding-bottom: 45px;
+    }
+  }
+  & p {
+    font-family: $font-secondary;
+    font-size: 14px;
+    line-height: 22px;
+    padding-bottom: 15px;
+    @include breakpoint(desktop) {
+      font-size: 16px;
+      line-height: 24px;
+      padding-bottom: 23px;
+    }
+    & img {
+      padding-top: 30px;
+      @include breakpoint(desktop) {
+        padding-top: 50px;
+      }
+    }
+  }
+}
+
+// -----About Cards -----
+
+.cards {
+  &-block {
+    display: flex;
+    flex-wrap: wrap;
+    @include breakpoint(desktop) {
+      flex-wrap: unset;
+    }
+  }
+  &-item {
+    background-color: $color-lighGrey;
+    margin-bottom: 20px;
+    @include breakpoint(desktop) {
+      margin-right: 30px;
+      &:nth-child(3n) {
+        margin-right: 0px;
+      }
+    }
+    &--hold {
+      width: 90%;
+      margin: 0 auto;
+      padding-bottom: 20px;
+      @include breakpoint(desktop) {
+        width: 90%;
+        margin: 0 auto;
+        padding-bottom: 38px;
+      }
+    }
+    &--title {
+      color: $color-blue;
+      font-size: 18px;
+      line-height: 22px;
+      padding-top: 20px;
+      padding-bottom: 45px;
+      @include breakpoint(desktop) {
+        font-size: 32px;
+        line-height: 32px;
+        padding-bottom: 73px;
+        padding-top: 36px;
+      }
+    }
+    &--descritption {
+      font-size: 14px;
+      line-height: 20px;
+      @include breakpoint(desktop) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    &--line {
+      border-top: 1px solid blue;
+      width: 24px;
+      position: relative;
+      top: 10px;
+      padding-bottom: 40px;
+    }
+  }
+}

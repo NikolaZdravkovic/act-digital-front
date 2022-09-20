@@ -3,6 +3,7 @@ import triangle_right from '../../public/assets/triangle_right.png'
 
 const CaseStudiesBlock = ({ props }) => {
     const data = props.data.data.attributes.caseStudies
+    console.log(data)
 
     // const data = props.data.data.attributes.caseStudiesHP;
 
