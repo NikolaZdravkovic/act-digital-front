@@ -340,6 +340,9 @@
       position: relative;
       max-width: 650px;
     }
+    &-image{
+      filter: brightness(50%);
+  }
   }
   .growth-wrapper {
     @include breakpoint(desktop) {

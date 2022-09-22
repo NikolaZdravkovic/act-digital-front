@@ -1,0 +1,24 @@
+.contact{
+    .banner {
+        height: 668px;
+        @include breakpoint(desktop) {
+          height: 600px;
+        }
+        &-wrapper {
+          color: $color-white;
+        }
+        &-title {
+          margin-bottom: 40px;
+          position: relative;
+          top: 24rem;
+        }
+        &-desc {
+          top: 24rem;
+          position: relative;
+          max-width: 650px;
+        }
+        &-image{
+            filter: brightness(50%);
+        }
+      }
+}

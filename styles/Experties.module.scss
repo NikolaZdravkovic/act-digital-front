@@ -3,6 +3,9 @@
         @include breakpoint(desktop) {
             height: 600px;
         }
+        &-image{
+            filter: brightness(50%);
+        }
     }
     .banner-description {
         color: $color-white;
