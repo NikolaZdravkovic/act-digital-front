@@ -16,6 +16,7 @@ import ContactBlock from "../components/global/ContactBlock"
 
 export default function Home(props) {
   const router = useRouter();
+  console.log(props)
   const { locale } = router;
   let lang;
   if (locale === 'en') {
