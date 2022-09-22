@@ -307,11 +307,12 @@
 // -----About page -----
 .about-container {
   .banner {
-    height: 600px;
+    height: 668px;
+    @include breakpoint(desktop) {
+      height: 600px;
+    }
     &-wrapper {
       color: $color-white;
-      @include breakpoint(desktop) {
-      }
     }
     &-title {
       margin-bottom: 40px;

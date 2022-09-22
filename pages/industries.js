@@ -13,7 +13,9 @@ export default function IndustriesPage(props) {
 
 
         <div className="industries-container">
-            <Hero props={props} />
+            <div className="banner">
+                <Hero props={props} />
+            </div>
             <IndustrieCategories props={props} />
             <div className="case-studies">
                 <CaseStudiesBlock props={props} />

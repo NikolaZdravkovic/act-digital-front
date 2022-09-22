@@ -32,9 +32,11 @@ export default function Home(props) {
   return (
 
     <div className="homepage-container">
-      <Hero props={props} />
-      <div className="banner-anchors">
-        <Anchor props={props} />
+      <div className="banner">
+        <Hero props={props} />
+        <div className="banner-anchors">
+          <Anchor props={props} />
+        </div>
       </div>
 
       <div className="text-block">

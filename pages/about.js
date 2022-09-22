@@ -16,7 +16,9 @@ const About = (props) => {
     return (
         <>
             <div className="about-container">
-                <Hero props={props} />
+                <div className="banner">
+                    <Hero props={props} />
+                </div>
                 <div className="text">
                     <TextBlock props={text_1} />
                 </div>

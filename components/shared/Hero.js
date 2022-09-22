@@ -6,13 +6,13 @@ const Hero = ({ props }) => {
     const data = props.data.data.attributes;
     const { url } = props.data.data.attributes.hero.image.data.attributes
     return (
-        <div className="banner">
+        <>
             <div className="banner-image">
-                    <Image
-                        priority
-                        layout="fill"
-                        objectFit="cover"
-                        src={url} />
+                <Image
+                    priority
+                    layout="fill"
+                    objectFit="cover"
+                    src={url} />
 
             </div>
             <div className="banner-wrapper container">
@@ -26,8 +26,7 @@ const Hero = ({ props }) => {
                     <p>{data.hero.description}</p>
                 </div>
             </div>
-        </div>
-
+        </>
     )
 
 }

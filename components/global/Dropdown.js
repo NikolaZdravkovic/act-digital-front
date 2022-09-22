@@ -6,13 +6,14 @@ import Link from 'next/link'
 const Dropdown = ({submenus}) => {
 // console.log(submenus.dropdownLinks)
 // console.log(submenus[2].dropdownLinks);
-const [dropdown, setDropdown] = useState(false);
+// const [dropdown, setDropdown] = useState(false);
 // console.log(submenus[0].subLink)
 const dropMenu = submenus[0].subLink
+console.log(dropMenu)
   return (
     <ul
-    className ="dropdown-content"
-    onClick={() => setDropdown(!dropdown)}
+    className ="nav-dropdown__content"
+    // onClick={() => setDropdown(!dropdown)}
   >
     {dropMenu.map((item) => {
       return (
@@ -20,7 +21,7 @@ const dropMenu = submenus[0].subLink
           <Link
             href={'item.path'}
             // className={item.cName}
-            onClick={() => setDropdown(false)}
+            // onClick={() => setDropdown(false)}
           >
             {item.label}
           </Link>

@@ -11,7 +11,10 @@ import ContactBlock from "../components/global/ContactBlock"
 const Experties = (props) => {
     return (
         <div className="experties-container">
-            <Hero props={props} />
+            <div className="banner">
+                <Hero props={props} />
+            </div>
+
             <div className="experties">
                 <ExpertiesBlock props={props} />
             </div>
