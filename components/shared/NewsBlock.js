@@ -2,12 +2,19 @@ import React from 'react'
 import triangle_right from '../../public/assets/triangle_right.png'
 
 const NewsBlock = ({ props }) => {
-    const data = props.data.data.attributes.newsBlock;
+    let data;
+    let res = Object.values(props.data).some((val) => Array.isArray(val));
+    console.log(res);
+    if (res === true) {
+        data = props.data.data[0].attributes.newsBlock
+    } else {
+         data = props.data.data.attributes.newsBlock;
+    }
     return (
         <div className="news">
             <div className="news-frame">
                 <div className="news-title">
-                    Insights & News
+                   {res ===true ? 'Related' : 'Insights & News'} 
                 </div>
                 <div className="news-seeAll">
                     <div>See all</div>

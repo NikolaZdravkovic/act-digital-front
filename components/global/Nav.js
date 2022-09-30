@@ -42,7 +42,7 @@ const Nav = () => {
     const navItems = data.data.attributes.body;
     const langItems = data.data.attributes.language;
     const subLink = navItems[0].subLink;
-    console.log(subLink)
+    // console.log(subLink)
     const toggleCheck = () => {
         document.getElementById("burger-checkbox").checked = false;
     }

@@ -8,7 +8,7 @@ import ContactBlock from "../components/global/ContactBlock"
 
 export default function IndustriesPage(props) {
     const { url } = props.data.data.attributes.hero.image.data.attributes
-
+    console.log(props)
     return (
 
 
@@ -36,6 +36,7 @@ export default function IndustriesPage(props) {
 export async function getServerSideProps() {
     const res = await fetch(`${API_URL}/api/industries-page?populate=deep`)
     const data = await res.json()
+    console.log(data)
 
     return {
         props: { data },

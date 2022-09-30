@@ -9,7 +9,7 @@ const Dropdown = ({submenus}) => {
 // const [dropdown, setDropdown] = useState(false);
 // console.log(submenus[0].subLink)
 const dropMenu = submenus[0].subLink
-console.log(dropMenu)
+// console.log(dropMenu)
   return (
     <ul
     className ="nav-dropdown__content"

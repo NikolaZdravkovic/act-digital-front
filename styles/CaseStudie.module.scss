@@ -1,0 +1,63 @@
+.studie {
+    &-container {
+        .news-title {
+            font-weight: 400;
+            font-size: 24px;
+            color: $color-blue;
+            padding-bottom: 41px;
+            @include breakpoint(desktop) {
+                font-size: 32px;
+                padding-bottom: 45px;
+            }
+        }
+    }
+    &-banner {
+        width: 100%;
+        position: relative;
+        height: 668px;
+        @include breakpoint(desktop) {
+            height: 600px;
+        }
+        &--block {
+            position: relative;
+            color: $color-white;
+            top: 26rem;
+            @include breakpoint(desktop) {
+                top: 21rem;
+            }
+        }
+    }
+    &-image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        filter: brightness(50%);
+    }
+    &-title {
+        font-size: 36px;
+        line-height: 42px;
+        padding-bottom: 30px;
+        @include breakpoint(desktop) {
+            padding-bottom: 42px;
+            font-size: 52px;
+        }
+    }
+    &-description {
+        line-height: 32px;
+        font-size: 21px;
+        @include breakpoint(desktop) {
+            padding-bottom: 21px;
+            font-size: 32px;
+            line-height: 42px;
+        }
+    }
+    &-category {
+        font-size: 16px;
+        line-height: 28px;
+        padding-bottom: 12px;
+        @include breakpoint(desktop) {
+            padding-bottom: 21px;
+            font-size: 21px;
+        }
+    }
+}

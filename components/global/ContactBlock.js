@@ -2,7 +2,13 @@ import React from 'react'
 import arrow from '../../public/assets/arrow.png'
 
 const ContactBlock = ({ props }) => {
-    const data = props.data.data.attributes.contactBlock;
+    let data;
+    let res = Object.values(props.data).some((val) => Array.isArray(val));
+    if (res === true) {
+        data = props.data.data[0].attributes.contactBlock
+    } else {
+         data = props.data.data.attributes.contactBlock;
+    }
     return (
         <div className="contactBlock-wrapper">
             <div className="contactBlock-block">
