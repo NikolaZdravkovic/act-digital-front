@@ -1,5 +1,6 @@
 import React from 'react'
 import triangle_right from '../../public/assets/triangle_right.png'
+import Link from 'next/link'
 
 const CaseStudiesBlock = ({ props }) => {
     const data = props.data.data.attributes.caseStudies
@@ -14,10 +15,12 @@ const CaseStudiesBlock = ({ props }) => {
                     Case Studies
 
                 </div>
-                <div className="case-studiesBlock__seeAll">
-                    <div> See all</div>
-                    <img src={`${triangle_right.src}`} alt="" />
-                </div>
+                <Link href="/case-studies">
+                    <div className="case-studiesBlock__seeAll">
+                        <div> See all</div>
+                        <img src={`${triangle_right.src}`} alt="" />
+                    </div>
+                </Link>
             </div>
             <div className="case-studiesBlock__wrapper">
                 {data.map((item, index) => (

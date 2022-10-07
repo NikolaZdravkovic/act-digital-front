@@ -17,7 +17,7 @@ export default function IndustriesPage(props) {
                 <Hero props={props} />
             </div>
             <IndustrieCategories props={props} />
-            <div className="case-studies">
+            <div className="case-studiesBlock">
                 <CaseStudiesBlock props={props} />
             </div>
             <div className="news container">

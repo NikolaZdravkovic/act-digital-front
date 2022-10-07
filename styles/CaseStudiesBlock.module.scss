@@ -2,24 +2,30 @@
     @include breakpoint(desktop) {
         width: 100%;
     }
-    &__frame{
+    &__frame {
         display: flex;
         justify-content: space-between;
         padding-right: 15px;
     }
-    &__seeAll{
-        display: none;
-        padding-top: 5px;
+    &__seeAll {
+        display: flex;
+        cursor: pointer;
+        div {
+            padding-right: 10px;
+        }
+        img {
+            position: relative;
+            top: 1px;
+            height: 14px;
+        }
         @include breakpoint(desktop) {
-            display: flex;
-            div{
+            div {
                 padding-right: 20px;
             }
-            img{
-                height: 14px;
+            img {
+                top: 0px;
             }
         }
-      
     }
     &__wrapper {
         @include breakpoint(tablet) {
@@ -36,7 +42,7 @@
             margin-right: 13px;
             margin-bottom: 25px;
         }
-        @include breakpoint(desktop){
+        @include breakpoint(desktop) {
             width: 49%;
         }
     }
@@ -73,7 +79,7 @@
             position: relative;
             top: 10px;
             padding-bottom: 40px;
-            @include breakpoint(desktop){
+            @include breakpoint(desktop) {
                 padding-bottom: 88px;
             }
         }

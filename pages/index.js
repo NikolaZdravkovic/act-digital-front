@@ -57,7 +57,7 @@ export default function Home(props) {
       <div className="experties">
         <Experties props={props} />
       </div>
-      <div className="case-studies">
+      <div className="case-studiesBlock">
         <CaseStudiesBlock props={props} />
       </div>
       <div className="news container">

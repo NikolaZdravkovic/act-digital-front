@@ -18,7 +18,7 @@ const Experties = (props) => {
             <div className="experties">
                 <ExpertiesBlock props={props} />
             </div>
-            <div className="case-studies">
+            <div className="case-studiesBlock">
                 <CaseStudiesBlock props={props} />
             </div>
             <div className="news container">

@@ -1,3 +1,18 @@
+.case-studies {
+    &__wrapper {
+        width: 90%;
+        margin: auto;
+        @include breakpoint(tablet) {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1560px;
+        }
+    }
+    &__content {
+        padding-top: 100px;
+    }
+}
+
 .studie {
     &-container {
         .news-title {
@@ -58,6 +73,115 @@
         @include breakpoint(desktop) {
             padding-bottom: 21px;
             font-size: 21px;
+        }
+    }
+    &-item {
+        margin-bottom: 48px;
+        width: 100%;
+
+        @include breakpoint(tablet) {
+            width: 100%;
+        }
+        @include breakpoint(desktop) {
+            width: 88%;
+            max-width: 1920px;
+            display: flex;
+            margin-bottom: 20px;
+        }
+        &__image {
+            height: 198px;
+            position: relative;
+            @include breakpoint(desktop) {
+                top: 18px;
+                width: 100%;
+                height: 330px;
+                max-width: 558px;
+            }
+        }
+        &__container {
+            display: flex;
+            flex-wrap: wrap;
+            @include breakpoint(tablet) {
+                width: 47%;
+                margin-right: 20px;
+            }
+            @include breakpoint(desktop) {
+                justify-content: center;
+                width: 100%;
+                margin-bottom: 30px;
+            }
+        }
+        &__block {
+            margin-left: 0px;
+            @include breakpoint(desktop) {
+                position: relative;
+                margin-left: 30px;
+            }
+        }
+        &--category {
+            padding-top: 10px;
+            padding-bottom: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 28px;
+            color: $color-blue;
+            @include breakpoint(desktop) {
+                padding-bottom: 15px;
+                font-size: 18px;
+                line-height: 28px;
+            }
+        }
+        &--title {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 24px;
+            padding-bottom: 15px;
+            @include breakpoint(desktop){
+                padding-bottom: 50px;
+            }
+        }
+        &--description {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            padding-bottom: 27px;
+            @include breakpoint(desktop) {
+                padding-bottom: 15px;
+            }
+        }
+        &--divider {
+            display: none;
+            border-top: 1px solid blue;
+            width: 24px;
+            @include breakpoint(desktop) {
+                display: block;
+                padding-bottom: 50px;
+            }
+        }
+        &--readMore {
+            display: flex;
+            @include breakpoint(desktop){
+                position: absolute;
+                bottom: -17px;
+            }
+            & span {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 28px;
+                color: $color-blue;
+            }
+        }
+        &--icon {
+            position: relative;
+            width: 33px;
+            height: 14px;
+            top: 7px;
+            left: 46px;
+            @include breakpoint(desktop) {
+                width: 24px;
+                height: 14px;
+                left: 24px;
+            }
         }
     }
 }
