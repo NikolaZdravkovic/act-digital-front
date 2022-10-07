@@ -159,6 +159,7 @@
             }
         }
         &--readMore {
+            cursor: pointer;
             display: flex;
             @include breakpoint(desktop){
                 position: absolute;
