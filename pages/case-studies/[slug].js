@@ -5,14 +5,13 @@ import TextBlock from '../../components/shared/TextBlock'
 import NewsBlock from "../../components/shared/NewsBlock"
 import ContactBlock from "../../components/global/ContactBlock"
 
-
-
 import Image from 'next/image'
 const CaseStudie = (props) => {
     const router = useRouter();
     const slug = router.query.slug
     const data = props.data.data[0].attributes;
-    const text_1 = data.textBlock[0].content;
+    const text = JSON.parse(data.textBlock[0].content);
+    const content = text.blocks;
     let res = Object.values(props.data).some((val) => Array.isArray(val));
     console.log(res);
 
@@ -34,7 +33,7 @@ const CaseStudie = (props) => {
             </div>
             <div className="studie-content">
                 <div className="text">
-                    <TextBlock props={text_1} />
+                    <TextBlock props={content} />
                 </div>
                 <div className="news container">
                     <NewsBlock props={props} />

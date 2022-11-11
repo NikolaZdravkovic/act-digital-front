@@ -52,11 +52,13 @@ const Nav = () => {
             <div className="nav">
                 <div className='nav-wrapper container'>
                     <div className="nav-logo">
-                        <Link href={'/'}>
-                            <Image
-                                src={logo}
-                                layout="fill" objectFit="cover"
-                            />
+                        <Link key={'href'} href={'/'}>
+                            <a href="">
+                                <Image
+                                    src={logo}
+                                    layout="fill" objectFit="cover"
+                                />
+                            </a>
                         </Link>
                     </div>
 
@@ -70,27 +72,28 @@ const Nav = () => {
                         </label>
                         <div className="nav-menu">
                             <nav>
-                                <div onClick={toggleCheck} className="nav-logo">
-
-                                    <Link href={'/'}>
-                                        <Image
-                                            src={logo}
-                                            layout="fill" objectFit="cover"
-                                        />
+                                <div key={'id'} onClick={toggleCheck} className="nav-logo">
+                                    <Link  key={'logo'} href={'/'}>
+                                        <a href="">
+                                            <Image
+                                                src={logo}
+                                                layout="fill" objectFit="cover"
+                                            />
+                                        </a>
                                     </Link>
                                 </div>
                                 <ul>
-                                    {navItems.map((item) => {
+                                    {navItems.map((item, index) => {
                                         if (item.label === "Industries") {
                                             return (
-                                                <>
-                                                    <div className="nav-accordion">
+                                                <div key={index}>
+                                                    <div  className="nav-accordion">
                                                         <li
                                                             onClick={toggleCheck}
                                                             key={item.id}
                                                             className="nav-links__item"
                                                         >
-                                                            <Link href={item.href}>{item.label}</Link>
+                                                            <Link key={item.label} href={item.href}>{item.label}</Link>
 
                                                         </li>
                                                         <div className="nav-accordion__arrow" onClick={() => setIsActive(!isActive)} >{isActive ? <div className="nav-accordion__arrow--down"></div> : <div className="nav-accordion__arrow--right"></div>}</div>
@@ -98,11 +101,11 @@ const Nav = () => {
                                                         {/* <Dropdown submenus={navItems} /> */}
 
                                                     </ div>
-                                                    <div className="nav-accordion__item">
+                                                    <div key={item.id} className="nav-accordion__item">
                                                         {isActive && <div className="nav-accordion__content">
-                                                            {subLink.map((item) => {
+                                                            {subLink.map((item, index) => {
                                                                 return (
-                                                                    <div className="nav-accordion__content--link">
+                                                                    <div key={index} className="nav-accordion__content--link">
                                                                         {item.label}
                                                                     </div>
                                                                 )
@@ -110,14 +113,14 @@ const Nav = () => {
                                                             })}
                                                         </div>}
                                                     </div>
-                                                </>
+                                                </div>
 
                                             );
                                         }
 
                                         return (
-                                            <li onClick={toggleCheck} key={item.id} className="nav-links__item">
-                                                <Link href={item.href}>{item.label}</Link>
+                                            <li  onClick={toggleCheck} key={item.id} className="nav-links__item">
+                                                <Link key={index} href={item.href}>{item.label}</Link>
                                             </li>
                                         );
                                     })}
@@ -128,22 +131,22 @@ const Nav = () => {
                     </header>
                     <div className="nav-links">
                         <ul className="nav-links__items">
-                            {navItems.map((item) => {
+                            {navItems.map((item, index) => {
                                 if (item.label === "Industries") {
                                     return (
-                                        <div className="nav-links__item nav-dropdown">
+                                        <div key={index} className="nav-links__item nav-dropdown">
                                             <li
                                                 key={item.id}
                                             >
-                                                <Link href={item.href}>{item.label}</Link>
+                                                <Link key={index} href={item.href}>{item.label}</Link>
                                             </li>
-                                            <Dropdown submenus={navItems} />
+                                            <Dropdown key={index}  submenus={navItems} />
                                         </div>
                                     );
                                 }
                                 return (
                                     <li key={item.id} className="nav-links__item">
-                                        <Link href={item.href}>{item.label}</Link>
+                                        <Link key={item.id} href={item.href}>{item.label}</Link>
                                     </li>
                                 );
                             })}
@@ -153,7 +156,7 @@ const Nav = () => {
 
                                     return (
                                         <span key={i} className="nav-links__item">
-                                            <Link href={asPath} locale={l}>
+                                            <Link key={i} href={asPath} locale={l}>
                                                 {l}
                                             </Link>
                                         </span>
