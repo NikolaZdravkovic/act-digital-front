@@ -4,7 +4,6 @@ import triangle_right from '../../public/assets/triangle_right.png'
 const NewsBlock = ({ props }) => {
     let data;
     let res = Object.values(props.data).some((val) => Array.isArray(val));
-    console.log(res);
     if (res === true) {
         data = props.data.data[0].attributes.newsBlock
     } else {

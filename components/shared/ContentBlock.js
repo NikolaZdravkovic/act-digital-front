@@ -3,14 +3,6 @@ import { ReactMarkdown } from 'react-markdown/lib/react-markdown'
 import ImageGallery from 'react-image-gallery';
 import { parseUrl } from 'next/dist/shared/lib/router/utils/parse-url';
 
-const Embed =({src})=>{
-    var parser = new DOMParser();
-    var doc = parser.parseFromString(src, 'text/html');
-    console.log(doc.body.firstChild)
-    return <div>
-        
-    </div>
-}
 const ContentBlock = ({ props }) => {
     console.log(props.content)
     let data = props.content

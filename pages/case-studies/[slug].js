@@ -12,7 +12,6 @@ const CaseStudie = (props) => {
     const router = useRouter();
     const slug = router.query.slug
     const data = props.data.data[0].attributes;
-    console.log(data)
     let res = Object.values(props.data).some((val) => Array.isArray(val));
    
     return (

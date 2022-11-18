@@ -8,7 +8,6 @@ import ContactBlock from "../../components/global/ContactBlock"
 
 
 const CaseStudiesPage = (props) => {
-    console.log(props.data.data)
     const data = props.data.data
     return (
         <div className="case-studies__container">
@@ -43,7 +42,6 @@ const CaseStudiesPage = (props) => {
 export async function getServerSideProps() {
     const res = await fetch(`${API_URL}/api/case-studies?populate=deep`)
     const data = await res.json()
-    console.log(data)
 
     return {
         props: { data },

@@ -9,7 +9,6 @@ import Image from 'next/image'
 
 
 const About = (props) => {
-    console.log(props)
     const textBlock = props.data.data.attributes.text;
     const image = props.data.data.attributes.image.image.data.attributes.url
     const text_1 = textBlock[0].text;

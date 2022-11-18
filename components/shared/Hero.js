@@ -5,7 +5,6 @@ import Image from "next/image"
 const Hero = ({ props }) => {
 
     const data = props.data.data.attributes;
-    console.log(data)
 
     const { url } = props.data.data.attributes.hero.image.data.attributes
     const format = props.data.data.attributes.hero.image.data.attributes.ext

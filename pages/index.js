@@ -17,6 +17,7 @@ import TextBlock from '../components/shared/TextBlock';
 
 export default function Home(props) {
   const router = useRouter();
+  const caseStudies = props.data.data.attributes.caseStudieBlock
   const { locale } = router;
   let lang;
   if (locale === 'en') {
@@ -56,7 +57,7 @@ export default function Home(props) {
         <Experties props={props} />
       </div>
       <div className="case-studiesBlock">
-        <CaseStudiesBlock props={props} />
+        <CaseStudiesBlock props={caseStudies} />
       </div>
       <div className="news container">
         <NewsBlock props={props} />
