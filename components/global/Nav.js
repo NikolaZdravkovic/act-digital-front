@@ -53,10 +53,10 @@ const Nav = () => {
                 <div className='nav-wrapper container'>
                     <div className="nav-logo">
                         <Link href={'/'}>
-                            <Image
-                                src={logo}
-                                layout="fill" objectFit="cover"
-                            />
+                                <Image
+                                    src={logo}
+                                    layout="fill" objectFit="cover"
+                                />
                         </Link>
                     </div>
 
@@ -73,10 +73,10 @@ const Nav = () => {
                                 <div onClick={toggleCheck} className="nav-logo">
 
                                     <Link href={'/'}>
-                                        <Image
-                                            src={logo}
-                                            layout="fill" objectFit="cover"
-                                        />
+                                            <Image
+                                                src={logo}
+                                                layout="fill" objectFit="cover"
+                                            />
                                     </Link>
                                 </div>
                                 <ul>
@@ -84,7 +84,8 @@ const Nav = () => {
                                         if (item.label === "Industries") {
                                             return (
                                                 <>
-                                                    <div className="nav-accordion">
+                                                    <div
+                                                        className="nav-accordion">
                                                         <li
                                                             onClick={toggleCheck}
                                                             key={item.id}
@@ -98,11 +99,11 @@ const Nav = () => {
                                                         {/* <Dropdown submenus={navItems} /> */}
 
                                                     </ div>
-                                                    <div className="nav-accordion__item">
+                                                    <div key={item} className="nav-accordion__item">
                                                         {isActive && <div className="nav-accordion__content">
-                                                            {subLink.map((item) => {
+                                                            {subLink.map((item, index) => {
                                                                 return (
-                                                                    <div className="nav-accordion__content--link">
+                                                                    <div key={index} className="nav-accordion__content--link">
                                                                         {item.label}
                                                                     </div>
                                                                 )

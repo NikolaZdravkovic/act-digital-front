@@ -5,13 +5,15 @@ import TextBlock from '../components/shared/TextBlock'
 import GrowthData from '../components/shared/GrowthData'
 import AboutCards from '../components/slices/AboutCards'
 import ContactBlock from '../components/global/ContactBlock'
+import Image from 'next/image'
 
 
 const About = (props) => {
-    console.log(props.data.data.attributes.textBlock)
-    const textBlock = props.data.data.attributes.textBlock;
-    const text_1 = textBlock[0].content;
-    const text_2 = textBlock[1].content;
+    console.log(props)
+    const textBlock = props.data.data.attributes.text;
+    const image = props.data.data.attributes.image.image.data.attributes.url
+    const text_1 = textBlock[0].text;
+    const text_2 = textBlock[1].text;
 
     return (
         <>
@@ -28,6 +30,9 @@ const About = (props) => {
                 </div>
                 <div className="text">
                     <TextBlock props={text_2} />
+                </div>
+                <div className="about-image">
+                  <img src={image} alt="" />
                 </div>
                 <div className="contactBlock">
                     <ContactBlock props={props} />

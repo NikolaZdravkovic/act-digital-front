@@ -13,10 +13,10 @@ import CaseStudiesBlock from "../components/shared/CaseStudiesBlock"
 import NewsBlock from "../components/shared/NewsBlock"
 import Clients from "../components/shared/Clients"
 import ContactBlock from "../components/global/ContactBlock"
+import TextBlock from '../components/shared/TextBlock';
 
 export default function Home(props) {
   const router = useRouter();
-  console.log(props)
   const { locale } = router;
   let lang;
   if (locale === 'en') {
@@ -39,12 +39,10 @@ export default function Home(props) {
           <Anchor props={props} />
         </div>
       </div>
-
       <div className="text-block">
         <div className="text-block-background"></div>
         <div className="text-block-title">
-          {/* <TextBlock props={textBlock_1} /> */}
-          <h4>{lang.hpText}</h4>
+          <h4> <TextBlock props={props.data.data.attributes.text[0].text} /></h4>
         </div>
       </div>
       < GrowthData />

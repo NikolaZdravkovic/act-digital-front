@@ -344,6 +344,12 @@
       filter: brightness(50%);
     }
   }
+  .about {
+    &-image {
+      max-width: 911px;
+      margin: 0 auto;
+    }
+  }
   .growth-wrapper {
     @include breakpoint(desktop) {
       padding-top: 135px;
@@ -401,6 +407,19 @@
       padding-top: 30px;
       @include breakpoint(desktop) {
         padding-top: 50px;
+      }
+    }
+  }
+  &-item{
+    margin-bottom: 20px;
+  }
+  &-embed {
+    &--src {
+      & iframe {
+        width: 100%;
+        @include breakpoint(desktop) {
+          height: 400px;
+        }
       }
     }
   }
