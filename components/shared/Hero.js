@@ -47,9 +47,7 @@ const Hero = ({ props }) => {
                         src={url} />
                 </div>
                 <div className="banner-wrapper container">
-                    <div className="banner-category">
-                        <p>{data.hero.category}</p>
-                    </div>
+                 
                     <div className='banner-title'>
                         <h1>{data.hero.title}</h1>
                     </div>

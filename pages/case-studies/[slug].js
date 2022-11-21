@@ -23,7 +23,7 @@ const CaseStudie = (props) => {
                         objectFit="cover" src={data.image.data.attributes?.url} />
                 </div>
                 <div className="studie-banner--block container">
-                    <div className="studie-category">{data.category}</div>
+                    <div className="studie-category">{data?.case_studies?.data?.attributes?.title}</div>
                     <div className="studie-title">{data.title}</div>
                     <div className="studie-description">{data.description}</div>
                 </div>

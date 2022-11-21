@@ -8,6 +8,8 @@ import ContactBlock from "../components/global/ContactBlock"
 
 export default function IndustriesPage(props) {
     const { url } = props.data.data.attributes.hero.image.data.attributes
+    const caseStudies = props.data.data.attributes.caseStudiesBlock
+    console.log(caseStudies)
     return (
 
         <div className="industries-container">
@@ -16,7 +18,7 @@ export default function IndustriesPage(props) {
             </div>
             <IndustrieCategories props={props} />
             <div className="case-studiesBlock">
-                <CaseStudiesBlock props={props} />
+                <CaseStudiesBlock props={caseStudies} />
             </div>
             <div className="news container">
                 <NewsBlock props={props} />

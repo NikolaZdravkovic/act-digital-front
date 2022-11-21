@@ -6,8 +6,6 @@ const CaseStudiesBlock = ({ props }) => {
     // const data = props.data.data.attributes.caseStudies
     const data = props.case_studies.data
 
-    console.log(props.case_studies.data)
-
     // const data = props.data.data.attributes.caseStudiesHP;
 
     return (
@@ -25,8 +23,8 @@ const CaseStudiesBlock = ({ props }) => {
             </div>
             <div className="case-studiesBlock__wrapper">
                 {data.map((item, index) => (
-                    <Link href={`case-studies/${item.attributes.slug}`}>
-                        <div key={index} className="case-studiesBlock__block">
+                    <Link key={index} href={`case-studies/${item.attributes.slug}`}>
+                        <div  className="case-studiesBlock__block">
                             <div className="case-studiesBlock__content">
                                 <div className="case-studiesBlock__content--title">
                                     {item.attributes.title}
