@@ -13,7 +13,9 @@ const CaseStudie = (props) => {
     const slug = router.query.slug
     const data = props.data.data[0].attributes;
     let res = Object.values(props.data).some((val) => Array.isArray(val));
-   
+    const news = props.data.data[0].attributes.news
+    console.log(news)
+
     return (
         <div className="studie-container">
             <div className="studie-banner">
@@ -33,7 +35,7 @@ const CaseStudie = (props) => {
                     <ContentBlock props={data} />
                 </div>
                 <div className="news container">
-                    <NewsBlock props={props} />
+                    <NewsBlock props={news} />
                 </div>
                 <div className="contactBlock">
                     <ContactBlock props={props} />

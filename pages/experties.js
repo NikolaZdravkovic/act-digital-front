@@ -10,7 +10,8 @@ import ContactBlock from "../components/global/ContactBlock"
 
 const Experties = (props) => {
   const caseStudies = props.data.data.attributes.caseStudiesBlock
-  console.log(props.data.data.attributes.caseStudiesBlock)
+  const news = props.data.data.attributes.news
+  console.log(news)
 
     return (
         <div className="experties-container">
@@ -25,7 +26,7 @@ const Experties = (props) => {
                 <CaseStudiesBlock props={caseStudies} />
             </div>
             <div className="news container">
-                <NewsBlock props={props} />
+                <NewsBlock props={news} />
             </div>
             <div className="clients container">
                 <Clients props={props} />
