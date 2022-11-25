@@ -19,6 +19,7 @@ export default function Home(props) {
   const router = useRouter();
   const caseStudies = props.data.data.attributes.caseStudieBlock
   const news = props.data.data.attributes.news
+  console.log(props.data.data.attributes)
 
   const { locale } = router;
   let lang;

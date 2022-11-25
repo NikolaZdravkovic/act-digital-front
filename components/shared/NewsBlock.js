@@ -33,7 +33,7 @@ const NewsBlock = ({ props }) => {
                                     {item?.attributes.news.data?.attributes.title}
                                 </div>
                                 <div className="news-block--img">
-                                    <img src={`${item.attributes.image.data.attributes.url}`} alt="" />
+                                    <img src={`${item.attributes.image.data?.attributes.url}`} alt="" />
                                 </div>
                                 <div className="news-block--title">
                                     {item.attributes.title}

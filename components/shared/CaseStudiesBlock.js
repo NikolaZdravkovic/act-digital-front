@@ -5,7 +5,6 @@ import Link from 'next/link'
 const CaseStudiesBlock = ({ props }) => {
     // const data = props.data.data.attributes.caseStudies
     const data = props.case_studies.data
-
     // const data = props.data.data.attributes.caseStudiesHP;
 
     return (
@@ -33,7 +32,7 @@ const CaseStudiesBlock = ({ props }) => {
                                 <div className="case-studiesBlock__content--desc">{item.attributes.description}</div>
                             </div>
                             <div className="case-studiesBlock__img">
-                                <img src={`${item.attributes.image.data.attributes.url}`} alt="" />
+                                <img src={`${item.attributes.image.data?.attributes.url}`} alt="" />
                             </div>
                         </div>
                     </Link>

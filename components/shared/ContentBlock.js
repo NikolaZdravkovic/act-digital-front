@@ -23,6 +23,13 @@ const ContentBlock = ({ props }) => {
                         </div>
                     </div>
                 }
+                if (item.__component === "shared.qoutes") {
+                    return <div key={i} className="text-item">
+                        <div className="text-qoutes">
+                          "{item.title}"
+                        </div>
+                    </div>
+                }
                 if (item.__component === "shared.image-carousel") {
                     let images = []
                     item.imageCarousel.data.forEach(function (url) {
