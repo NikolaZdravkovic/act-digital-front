@@ -30,7 +30,7 @@ const NewsBlock = ({ props }) => {
                         {data.map((item, index) => (
                             <div key={index} className="news-block">
                                 <div className="news-block--category">
-                                    {item?.attributes.news.data?.attributes.title}
+                                    {item?.attributes.news?.data?.attributes.title}
                                 </div>
                                 <div className="news-block--img">
                                     <img src={`${item.attributes.image.data?.attributes.url}`} alt="" />
